@@ -1,7 +1,0 @@
-package com.johnp.rf;
-
-public class Options 
-{
-	enum difficulty { EASY, MEDIUM, HARD };
-	
-}
