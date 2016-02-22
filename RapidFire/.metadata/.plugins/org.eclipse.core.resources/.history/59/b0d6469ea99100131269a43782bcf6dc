@@ -1,0 +1,150 @@
+package com.johnp.rf.microgames;
+
+import java.util.ArrayList;
+
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Paint.Align;
+
+import com.johnp.framework.Game;
+import com.johnp.framework.Graphics;
+import com.johnp.rf.Assets;
+import com.johnp.rf.DPad;
+
+public class MicroRetroSnake extends MicroGame {
+
+	Paint paint;
+	
+	int[][] grid;
+	
+	DPad dPad = new DPad();
+	Head head;
+	
+	public MicroRetroSnake(Game game) {
+		super(game);
+		// TODO Auto-generated constructor stub
+		
+		setTimer(500 - GameManager.speed * 100f);
+		if (timer < 125)
+			timer = 125;
+		
+		setWin(false);
+		setHint("Snake");
+		setDescription("Use the D-Pad to guide the snake and eat the berry.");
+		
+		
+		head = new Head();
+		grid = new int[20][20];
+		
+		paint = new Paint();
+        paint.setAntiAlias(true);
+		
+	}
+
+	@Override
+	public void update(float deltaTime) {
+		// TODO Auto-generated method stub
+
+		setTimer(getTimer() - deltaTime);
+		
+		if(timer <= 0)
+			returnToGameScreen();
+		
+	}
+
+	@Override
+	public void paint(float deltaTime) {
+		// TODO Auto-generated method stub
+
+		Graphics g = game.getGraphics();
+		
+		g.clearScreen(Color.BLACK);
+		
+		//Border
+		for(int i = 0; i < grid.length; i ++)
+		{
+			for(int z = 0; z <grid[0].length; z++)
+			{
+				if(i == 0 || i == grid.length - 1 || z == 0 || z == grid[0].length - 1)
+					g.drawScaledImage(Assets.sprSnake, 388 + i * 32, z * 32, 32, 32, 32, 0, 16, 16);
+			}
+		}
+		
+		
+		//Snake
+		
+		//timer
+        paint.setColor(Color.WHITE);
+        paint.setTextSize(26);
+        paint.setTextAlign(Align.LEFT);
+		g.drawString((int)(timer / 100) + "", 0, 20, paint);
+		g.drawRect(28, 5, (int)timer, 5, Color.WHITE);
+		
+		
+		dPad.draw(g);
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void backButton() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	interface Snake
+	{
+		
+	}
+	
+	class Head implements Snake
+	{
+		int x, y, width, height;
+		ArrayList<Snake> body;
+		
+		public Head()
+		{
+			x = 10;
+			y = 10;
+			width = 32;
+			height = 32;
+			
+			body.add(this);
+			
+			for(int i = 0; i < (int)(GameManager.speed * 2); i++)
+			{
+					body.add(new Body(body.get((body.size() - 1))));	
+			}
+					
+		}
+		
+	}
+
+	class Body implements Snake
+	{
+		int x, y, width, height;
+		Snake parent;
+		
+		public Body(Snake snake) 
+		{
+			parent = snake;
+			
+		}
+	}
+}

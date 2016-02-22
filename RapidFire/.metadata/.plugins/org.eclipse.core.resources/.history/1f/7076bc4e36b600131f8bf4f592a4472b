@@ -1,0 +1,97 @@
+package com.johnp.rf.microgames;
+
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Paint.Align;
+
+import com.johnp.framework.Game;
+import com.johnp.framework.Graphics;
+import com.johnp.rf.Assets;
+
+public class MicroRetroFrogger extends MicroGame {
+
+	Paint paint;
+	
+	public MicroRetroFrogger(Game game) {
+		super(game);
+		
+		setTimer(500 - GameManager.speed * 100f);
+		if (timer < 125)
+			timer = 125;
+		
+		setWin(false);
+		setHint("Cross");
+		setDescription("Touch the screen to make the frog hop forward and avoid the cars.");
+		
+
+		paint = new Paint();
+        paint.setAntiAlias(true);
+		
+	}
+
+	@Override
+	public void update(float deltaTime) {
+		
+		setTimer(getTimer() - deltaTime);
+		
+		if(timer <= 0)
+			returnToGameScreen();
+		
+	}
+
+	@Override
+	public void paint(float deltaTime) {
+
+		Graphics g = game.getGraphics();
+		
+		g.clearScreen(Color.BLACK);
+
+		//SideWalk
+		for(int i = 0; i < 40; i++)
+		{
+			
+			if( i < 10)
+				g.drawScaledImage(Assets.sprFrog, i * 128, 0, 128, 128, 96, 0, 16, 16);
+			else if( i < 20)
+				g.drawScaledImage(Assets.sprFrog, i * 128, 0, 128, 128, 96, 0, 16, 16);
+			else if(i < 30)
+				g.drawScaledImage(Assets.sprFrog, i * 128, 0, 128, 128, 96, 0, 16, 16);
+			else
+				g.drawScaledImage(Assets.sprFrog, i * 128, 0, 128, 128, 96, 0, 16, 16);
+
+		}
+		
+		//timer
+        paint.setColor(Color.BLACK);
+        paint.setTextSize(26);
+        paint.setTextAlign(Align.LEFT);
+		g.drawString((int)(timer / 100) + "", 0, 20, paint);
+		g.drawRect(28, 5, (int)timer, 5, Color.BLACK);
+		
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void backButton() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

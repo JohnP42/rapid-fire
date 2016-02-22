@@ -1,0 +1,66 @@
+package com.johnp.rf.microgames;
+
+import android.graphics.Paint;
+
+import com.johnp.framework.Game;
+import com.johnp.rf.microgames.MicroRetroPump.Man;
+
+public class MicroRetroFrogger extends MicroGame {
+
+	Paint paint;
+	
+	public MicroRetroFrogger(Game game) {
+		super(game);
+		
+		setTimer(500 - GameManager.speed * 100f);
+		if (timer < 125)
+			timer = 125;
+		
+		setWin(false);
+		setHint("Pump!");
+		setDescription("Touch the screen repeatedly to pump air into the ballon.");
+		
+		man = new Man();
+		
+		paint = new Paint();
+        paint.setAntiAlias(true);
+		
+	}
+
+	@Override
+	public void update(float deltaTime) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void paint(float deltaTime) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void backButton() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

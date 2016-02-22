@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.johnp.framework.Image"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Graphics.ImageFormat"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Screen"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Game"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="com.johnp.rf.GameScreen"/>
+<fullyQualifiedTypeName name="com.johnp.rf.microgames.MicroGame"/>
+<fullyQualifiedTypeName name="android.graphics.Paint.Align"/>
+<fullyQualifiedTypeName name="android.graphics.Paint.Style"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Input.TouchEvent"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Graphics"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="com.johnp.rf.DPad"/>
+<fullyQualifiedTypeName name="android.graphics.Paint"/>
+<fullyQualifiedTypeName name="com.johnp.rf.microgames.GameManager"/>
+<fullyQualifiedTypeName name="android.graphics.Rect"/>
+<fullyQualifiedTypeName name="com.johnp.rf.Animation"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.graphics.Point"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="android.view.GestureDetector.SimpleOnGestureListener"/>
+<fullyQualifiedTypeName name="android.view.MotionEvent"/>
+<fullyQualifiedTypeName name="android.view.GestureDetector"/>
+<fullyQualifiedTypeName name="com.johnp.framework.implementation.TouchSlide"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Audio"/>
+<fullyQualifiedTypeName name="com.johnp.rf.Assets"/>
+<fullyQualifiedTypeName name="java.util.concurrent.BlockingQueue"/>
+<fullyQualifiedTypeName name="android.media.SoundPool"/>
+<fullyQualifiedTypeName name="com.johnp.framework.implementation.SoundThread"/>
+<fullyQualifiedTypeName name="com.johnp.framework.Sound"/>
+<fullyQualifiedTypeName name="java.util.concurrent.LinkedBlockingQueue"/>
+</qualifiedTypeNameHistroy>

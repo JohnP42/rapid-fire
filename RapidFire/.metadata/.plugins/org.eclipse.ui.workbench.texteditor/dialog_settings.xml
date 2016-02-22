@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="210" key="DIALOG_Y_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="817" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value=".getRec().height()" key="selection"/>
+		<list key="findhistory">
+			<item value=".height"/>
+			<item value=".width"/>
+			<item value=".y"/>
+			<item value=".x"/>
+			<item value="setWin"/>
+			<item value="g.drawScaledImage(Assets.sprTarget, tar.x, tar.y, tar.width, tar.height, 0, 0, 32, 32);"/>
+			<item value="getIndex"/>
+			<item value="isTouchD"/>
+		</list>
+		<list key="replacehistory">
+			<item value=".getRec().height()"/>
+			<item value=".getRec().width()"/>
+			<item value=".getRec().top"/>
+			<item value=".getRec().left"/>
+			<item value=".getRec"/>
+			<item value="getRec().left"/>
+		</list>
+	</section>
+</section>
